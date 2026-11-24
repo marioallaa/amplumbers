@@ -3,3 +3,24 @@
 @media(max-width:800px){.topbar .container span:last-child{display:none}.topbar .container{justify-content:center}.header-inner{min-height:78px}.brand img{width:220px;height:50px}.menu-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:white;padding:24px;border-bottom:1px solid var(--line);box-shadow:0 12px 20px #0c253b0d;align-items:stretch;gap:0}.nav.open{display:flex;flex-direction:column}.nav a{padding:12px}.nav .button{margin-top:12px}.hero-grid{grid-template-columns:1fr;gap:40px;padding-block:45px 50px}.hero-copy>p{max-width:600px}.hero h1{font-size:clamp(3rem,8vw,4.8rem);max-width:650px}.hero-visual{padding-left:0}.hero-photo{height:500px;border-top-left-radius:70px}.hero-card{left:18px;bottom:0}.trust-grid{grid-template-columns:1fr 1fr;gap:22px}.trust-item{justify-content:start}.trust-item+.trust-item{border:0}.section{padding-block:65px}.section-heading{align-items:start;flex-direction:column;gap:22px;margin-bottom:32px}.section-heading>p{max-width:600px}.services-grid{grid-template-columns:1fr 1fr}.service{padding:25px}.split{grid-template-columns:1fr;gap:35px}.split-image{height:460px}.split-copy{max-width:650px}.project-grid{gap:18px}.project-card img{height:260px}.emergency .container,.cta .container{align-items:start;flex-direction:column;gap:25px}.faq-layout{grid-template-columns:1fr;gap:20px}.faq-intro p{max-width:600px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px}.footer-bottom{flex-direction:column}.contact-layout{grid-template-columns:1fr;gap:40px}.contact-details{grid-template-columns:1fr 1fr}.legal-layout{grid-template-columns:1fr;gap:35px}.legal-nav{position:static;display:flex;flex-wrap:wrap;gap:0 20px}.gallery-grid{grid-template-columns:1fr 1fr}.article-grid{grid-template-columns:1fr 1fr}.page-hero{padding-block:40px 50px}.page-hero h1{font-size:3rem}.breadcrumb{margin-bottom:28px}}
 @media(max-width:480px){.container{width:calc(100% - 36px)}.topbar{font-size:.75rem}.hero-grid{padding-top:35px}.hero h1{font-size:clamp(2.15rem,10.6vw,2.65rem);letter-spacing:-.055em}.hero-copy>p{font-size:1rem}.hero-photo{height:410px;border-top-left-radius:60px}.hero-card{left:12px;right:12px;padding:15px;gap:15px}.hero-card strong{font-size:.95rem}.hero-card span{font-size:.8rem}.hero-card img{width:52px}.hero-note{font-size:.8rem}.eyebrow{font-size:.7rem;letter-spacing:.12em}.actions .button{padding:13px 17px}.trust-grid{gap:20px 12px}.trust-item{font-size:.8rem;gap:8px}.trust-item .icon{width:23px;height:23px}.section{padding-block:52px}.services-grid{grid-template-columns:1fr}.service{padding:28px}.service>.icon{margin-bottom:22px}.service p{min-height:0}.split-image{height:390px}.project-grid{grid-template-columns:1fr}.project-card img{height:350px}.project-card{margin-bottom:12px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px 20px}.footer-grid>div:first-child{grid-column:1/-1}.footer-grid>div:last-child{grid-column:1/-1}.footer-grid p{max-width:100%}.footer-bottom nav{flex-wrap:wrap;gap:15px;font-size:.8rem}.page-hero h1{font-size:2.65rem}.contact-card{padding:24px 20px}.form-grid{grid-template-columns:1fr}.contact-details{grid-template-columns:1fr}.gallery-grid{gap:18px 12px}.gallery-button img{height:230px}.gallery-item figcaption{font-size:.8rem}.gallery-button span{font-size:.7rem;right:8px;bottom:8px}.filter{padding:9px 13px;font-size:.8rem}.article-grid{grid-template-columns:1fr}.recruit{padding:26px}.cta h2{font-size:2.4rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* Legal pages: print letterhead (hidden on screen) and print layout */
+.print-letterhead{display:none}
+@media print{
+ @page{size:A4;margin:16mm 16mm 18mm}
+ .skip,.topbar,.site-header,.site-footer,.page-hero,.legal-nav,.updated a{display:none!important}
+ body{background:#fff;color:#111;font-size:10.5pt;line-height:1.45}
+ .container,.legal-layout{display:block;max-width:none;padding:0;margin:0}
+ .section{padding:0}
+ .prose{max-width:none}
+ .prose p,.prose li{color:#111}
+ .prose h2{font-size:13pt;margin:16pt 0 5pt;break-after:avoid}
+ .prose section{break-inside:auto}
+ .prose li,.prose p{orphans:3;widows:3}
+ .print-letterhead{display:block;margin-bottom:14pt;border-bottom:2pt solid #0759dd;padding-bottom:10pt}
+ .print-letterhead img{display:block;width:62mm;height:auto;margin:0 0 6pt -2mm}
+ .print-company{font-size:8.5pt;color:#444!important;margin:0 0 10pt}
+ .print-title{font-size:20pt;font-weight:700;color:#0c253b!important;margin:0}
+ .prose .updated{font-size:9pt;color:#444;margin:0 0 10pt}
+ a{color:#111;text-decoration:none}
+}
