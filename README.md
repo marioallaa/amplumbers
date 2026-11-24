@@ -64,3 +64,11 @@ The checker validates local links and fragment IDs, image references, page struc
 ## Logo
 
 The header uses `images/am-plumbing-logo-v2.png`, a transparent PNG generated with the built-in image tool. The original logo is preserved as `images/AMPLUMBING-LOGO-2.png`. The generation prompt is recorded in `images/logo-prompt.txt`.
+
+## Updated logo and profile icons
+
+The header now uses `images/brand/am-plumbing-logo-wide.png`, with the lower line spanning the full wordmark width. The website uses `images/brand/favicon.png` for its favicon. Transparent icon and blue-and-white social PNG masters are in `images/brand/`, with separately named Instagram and WhatsApp copies. `am-plumbing-logo-pack.zip` contains the complete PNG set and usage notes. Earlier versions are preserved.
+
+## Invoice and social artwork
+
+Ready-to-use files are in `images/brand/invoice/` (A4 letterhead header and footer at 300 dpi, logo on white and transparent, email-signature logo) and `images/brand/social/` (Facebook, LinkedIn, X and Google Business banners, a 1200x630 link-share image, square profile pictures, and a white logo for dark backgrounds). They are generated from the masters in `images/brand/` by `python scripts/make_brand_assets.py` (needs Pillow; not part of the website build). The invoice footer links to the Terms & Conditions so that they are incorporated into each job.
